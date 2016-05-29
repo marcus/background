@@ -6,8 +6,8 @@ module.exports = [
 	},
 
 	{
-		test: /\.css$/,
-		loader: 'style-loader!css-loader'
+    test:   /\.css$/,
+    loader: "style-loader!css-loader!postcss-loader"
 	},
 	{
 		test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,

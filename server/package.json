@@ -2,6 +2,7 @@
   "author": "Marcus Vorwaller<marcus@vorwaller.net>",
   "license": "PROPRIETARY",
   "dependencies": {
+    "electron-screenshot-service": "^3.1.0",
     "json5": "^0.5.0",
     "phantom": "^2.1.2",
     "webshot": "^0.18.0"

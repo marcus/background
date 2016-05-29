@@ -12,5 +12,12 @@ body {
   min-height: 100vh;
   height: 100%;
   display: flex;
+  flex-direction: row;
+}
+.fill {
+  display: flex;
   flex: 1;
+  min-height: 100vh;
+}
+.quotation {
 }

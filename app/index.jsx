@@ -12,7 +12,7 @@ export class App extends React.Component {
     return (
       <div className="top" style={styles.container}>
         <div className="fill" style={styles.fill}>
-          <div style={styles.quotation}>
+          <div className="quotation" style={styles.quotation}>
             <div style={styles.text}>
               {source.quotation.text}
             </div>
@@ -26,14 +26,13 @@ export class App extends React.Component {
   }
 }
 
+//let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 const styles = {
   top: {
     flexDirection: 'row',
   },
   fill: {
-    display: 'flex',
     background: `url(/images/${source.image.path}) no-repeat center center fixed`,
-    flex: 1,
     backgroundSize: 'cover',
   },
 
