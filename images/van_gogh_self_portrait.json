@@ -1,0 +1,22 @@
+{
+  "size": {
+    "width": 346,
+    "height": 451
+  },
+  "quotation": {
+    "text": "I often think that the night is more alive and more richly colored than the day.",
+    "attribution": "Vincent van Gogh, Self-Portrait",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  },
+  "image": {
+    "url": "",
+    "path": "van_gogh_self_portrait.jpg",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  }
+}
