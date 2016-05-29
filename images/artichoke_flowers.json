@@ -1,0 +1,22 @@
+{
+  "size": {
+    "width": 1280,
+    "height": 960
+  },
+  "quotation": {
+    "text": "The richness I achieve comes from Nature, the source of my inspiration.",
+    "attribution": "Claude Monet, Jerusalem Artichoke Flowers",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  },
+  "image": {
+    "url": "",
+    "path": "artichoke_flowers.jpg",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  }
+}
