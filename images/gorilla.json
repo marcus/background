@@ -1,0 +1,22 @@
+{
+  "size": {
+    "width": 1280,
+    "height": 960
+  },
+  "quotation": {
+    "text": "The greatest danger to our future is apathy.",
+    "attribution": "Jane Goodall",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  },
+  "image": {
+    "url": "",
+    "path": "gorilla.jpg",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  }
+}

@@ -5,29 +5,28 @@ var autoprefixer = require('autoprefixer');
 
 module.exports = {
 	entry: [
-		'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
+		'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
 		'webpack/hot/only-dev-server',
-		'./index.jsx' // Your appʼs entry point
+    __dirname + '/assets/index',
 	],
 	devtool: process.env.WEBPACK_DEVTOOL || 'source-map',
 	output: {
-		path: path.join(__dirname, 'public'),
+		path: path.join(__dirname, 'public/assets/'),
+		publicPath: '/assets/',
 		filename: 'bundle.js'
 	},
 	resolve: {
+    //root: path.resolve(__dirname),
 		extensions: ['', '.js', '.jsx']
 	},
 	module: {
 		loaders: loaders
 	},
-	devServer: {
-		contentBase: "./public",
-			noInfo: true, //  --no-info option
-			hot: true,
-			inline: true
-		},
+	devServer: {},
 	plugins: [
-		new webpack.NoErrorsPlugin()
+    new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.NoErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
 	],
   postcss: [ autoprefixer({ browsers: ['last 4 versions'] }) ],
 };
