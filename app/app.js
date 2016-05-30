@@ -1,5 +1,7 @@
 var url = require('url');
 var path = require('path');
+var fs = require('fs');
+var screenshot = require('electron-screenshot-service');
 
 if(process.env.NODE_ENV !== 'production') {
   var webpack = require('webpack');
@@ -33,7 +35,28 @@ if(process.env.NODE_ENV !== 'production') {
 }
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Hey', message: 'Hello there!'});
+  res.render('index', { title: 'Background', source: require('./source.json')});
+});
+
+app.post('/print', function (req, res) {
+  // TODO - write the post to source.json
+  screenshot({
+    url : 'http://localhost:3000',
+    width : 1024,
+    height : 768
+  })
+  .then(function(img){
+    fs.writeFile('./quote.png', img.data, function(err){
+      if(err) {
+        console.log("There was a problem", err);
+      } else {
+        console.log("Done.");
+      }
+      screenshot.close();
+    });
+  }).then(function() {
+    res.render('index', { title: 'Background', source: req.body});
+  });
 });
 
 app.listen(3000, function () {

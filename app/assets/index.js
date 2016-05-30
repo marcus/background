@@ -3,8 +3,8 @@ require("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 require('./css/main.css');
 import React from 'react';
 import ReactDOM from 'react-dom';
-let source = require("../source.json");
-console.log("Hi");
+//let source = require("../source.json");
+let source = window.source;
 
 export class App extends React.Component {
 
