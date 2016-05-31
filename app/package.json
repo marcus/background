@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/alicoding/react-webpack-babel#readme",
   "dependencies": {
+    "bluebird": "^3.4.0",
     "bootstrap": "3.3.5",
     "electron-screenshot-service": "^3.1.0",
     "express": "^4.13.4",
@@ -35,7 +36,8 @@
     "proxy-middleware": "^0.15.0",
     "pug": "^2.0.0-alpha8",
     "react": "15.0.1",
-    "react-dom": "15.0.1"
+    "react-dom": "15.0.1",
+    "uuid": "^2.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
