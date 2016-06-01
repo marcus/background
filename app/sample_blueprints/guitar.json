@@ -1,0 +1,22 @@
+{
+  "size": {
+    "width": 1280,
+    "height": 960
+  },
+  "quotation": {
+    "text": "I don't know where I'm going from here, but I promise it won't be boring.",
+    "attribution": "David Bowie",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  },
+  "image": {
+    "url": "",
+    "path": "guitar.jpg",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  }
+}

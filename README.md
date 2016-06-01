@@ -5,20 +5,44 @@ To run it, install node, newest version or... whatever version you want probably
 
 ```
 cd app
-npm install
-npm run dev
-```
-If you're lucky you now have a server running on localhost:8080 with a big picture of the Buddha.
-
-To get a screenshot of it, open a new terminal and
-```
-brew install phantomjs
-cd server
+mkdir blueprints
+mkdir public/quotes
 npm install
 npm start
 ```
+If you're lucky you now have a server running on localhost:8080 with a big picture of the Buddha.
 
-If you're really lucky you will now have an image file in the server directory that's somewhat representational of the webpage running on the other sever. At the time I am writing this, it's pretty buggy in that the image is only the top 60 pixels or so of the webpage.
+To get a screenshot, open an API client like Postman and POST to http://localhost:3000/print
+```
+{
+  "size": {
+    "width": 1280,
+    "height": 960
+  },
+  "quotation": {
+    "text": "I don't know where I'm going from here, but I promise it won't be boring.",
+    "attribution": "David Bowie",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  },
+  "image": {
+    "url": "",
+    "path": "guitar.jpg",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  }
+}
+```
+
+If you're really lucky you will now have an image file in the app/public/quotes directory that's representational of what you want.
+
+## TODO
+* Honor height / width
+* Honor quote / image attribution
 
 ## image/json bundles
 putting paired jpg/json files in images

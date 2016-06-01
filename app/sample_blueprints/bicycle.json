@@ -1,0 +1,22 @@
+{
+  "size": {
+    "width": 1280,
+    "height": 960
+  },
+  "quotation": {
+    "text": "Simplicity is the ultimate sophistication.",
+    "attribution": "Leonardo DaVinci",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  },
+  "image": {
+    "url": "",
+    "path": "bicycle.jpg",
+    "source": {
+      "title": "",
+      "url": ""
+    }
+  }
+}
