@@ -45,8 +45,8 @@ if(process.env.NODE_ENV !== 'production') {
 }
 
 app.get('/', function (req, res) {
-  var sourceFile = req.param('blueprint') || 'source.json';
-  console.log("Source", req.param('blueprint'));
+  var sourceFile = req.query.blueprint || 'source.json';
+  console.log("Source", req.query.blueprint);
   try {
     var source = require('./blueprints/' + sourceFile);
   } catch (err) {
@@ -58,7 +58,7 @@ app.get('/', function (req, res) {
 app.post('/print', function (req, res) {
   var fileName = uuid.v4();
 
-  console.log("Writing body", req.body);
+  //console.log("Writing body", req.body);
   try{
     console.log(req.body.quotation);
   } catch(err) {
@@ -66,9 +66,10 @@ app.post('/print', function (req, res) {
   }
   writeFile('./blueprints/' + fileName + '.json', JSON.stringify(req.body))
     .then(function() {
-      console.log("Taking screenshot");
+      var screenshotUrl = 'http://localhost:3000?blueprint=' + fileName + '.json';
+      console.log("Taking screenshot", screenshotUrl);
       return screenshot({
-        url : 'http://localhost:3000?blueprint=' + fileName + '.json',
+        url : screenshotUrl,
         width : 1024,
         height : 768
       });
@@ -78,10 +79,12 @@ app.post('/print', function (req, res) {
     })
     .then(function() {
       screenshot.close();
-      return res.status(200).send({message: 'Rendered ' + fileName});
+      console.log("Screenshot complete", fileName);
+      return res.status(200).send({message: 'Rendered ' + fileName, file: fileName + '.jpg'});
     })
     .catch(function(err) {
       console.log("There was a problem with the request", err);
+      screenshot.close();
       return res.status(400).send({message: err.message});
     })
     ;
