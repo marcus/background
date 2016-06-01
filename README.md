@@ -10,7 +10,7 @@ mkdir public/quotes
 npm install
 npm start
 ```
-If you're lucky you now have a server running on localhost:8080 with a big picture of the Buddha.
+You should now have a server running on localhost:3000 with a big picture of the Buddha.
 
 To get a screenshot, open an API client like Postman and POST to http://localhost:3000/print
 ```
