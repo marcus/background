@@ -44,10 +44,6 @@ If you're really lucky you will now have an image file in the app/public/quotes 
 * Honor height / width
 * Honor quote / image attribution
 
-## image/json bundles
-putting paired jpg/json files in images
-cd images ; ./linkit.sh  will swap out app/source.json and put a symlink to the image in app/public/images
-
 ## Thoughts on the future of the app
 - How to organize quotations /images into categories that can be mixed and matched
 - What other widgets are useful? Weather? News? Sports? KISS and stay w/ image and quote?
