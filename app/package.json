@@ -1,7 +1,7 @@
 {
   "name": "react-webpack-babel",
   "version": "0.0.2",
-  "description": "React Webpack Babel Starter Kit",
+  "description": "Background Server",
   "main": "''",
   "scripts": {
     "build": "NODE_ENV=production webpack -p --config webpack.production.config.js --progress --profile --colors",
@@ -19,12 +19,12 @@
     "Starter",
     "template"
   ],
-  "author": "Ali Al Dallal",
-  "license": "MIT",
+  "author": "The Desktop Consortium",
+  "license": "Proprietary",
   "bugs": {
-    "url": "https://github.com/alicoding/react-webpack-babel/issues"
+    "url": "https://github.com/marcus/background/issues"
   },
-  "homepage": "https://github.com/alicoding/react-webpack-babel#readme",
+  "homepage": "https://github.com/marcus/background",
   "dependencies": {
     "bluebird": "^3.4.0",
     "body-parser": "^1.15.1",

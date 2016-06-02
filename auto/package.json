@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-node6": "^11.0.0",
+    "bluebird": "^3.4.0",
+    "nlp_compromise": "^5.1.0"
+  },
+  "scripts": {
+    "start": "babel-node go.js --presets node6"
+  }
+}

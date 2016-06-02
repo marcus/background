@@ -3,8 +3,8 @@ require("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 require('./css/main.css');
 import React from 'react';
 import ReactDOM from 'react-dom';
-//let source = require("../source.json");
 let source = window.source;
+const path = window.source.image.path ? `/images/${window.source.image.path}` : window.source.image.url;
 
 export class App extends React.Component {
 
@@ -33,7 +33,7 @@ const styles = {
     flexDirection: 'row',
   },
   fill: {
-    background: `url(/images/${source.image.path}) no-repeat center center fixed`,
+    background: `url(${path}) no-repeat center center fixed`,
     backgroundSize: 'cover',
   },
 
