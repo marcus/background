@@ -38,7 +38,7 @@ To get a screenshot, open an API client like Postman and POST to http://localhos
 }
 ```
 
-If you're really lucky you will now have an image file in the app/public/quotes directory that's representational of what you want.
+You will now have an image file in the app/public/quotes directory that's representational of what you want.
 
 ## TODO
 * Honor height / width
@@ -47,5 +47,3 @@ If you're really lucky you will now have an image file in the app/public/quotes 
 ## Thoughts on the future of the app
 - How to organize quotations /images into categories that can be mixed and matched
 - What other widgets are useful? Weather? News? Sports? KISS and stay w/ image and quote?
-
-Also, by way of full disclosure, there are competitors to this in the app store and they don't seem to be especially thriving. I think we can differentiate enough to sell, but that could just be me.pm start
